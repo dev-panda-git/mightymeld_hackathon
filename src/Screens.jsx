@@ -18,18 +18,26 @@ export const possibleTileContents = [
 
 export function StartScreen({ start }) {
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <div className="flex flex-col items-center justify-center w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] space-y-4 bg-pink-50 rounded-lg text-pink-400">
-        <h2 className="font-bold text-2xl capitalize">memory</h2>
-        <p>Flip over tiles looking for pairs</p>
+    <div className="h-screen w-screen flex flex-col p-4 items-center bg-black gap-2 font-mono">
+      <img src="match-tiles-logo.svg" className="h-[75vh] md:rotate-90 " />
+
+      <div className="flex flex-col items-center md:relative md:-top-[10vh] gap-2">
+        <p className="text-pink-400 md:text-2xl text-lg text-center">
+          Flip over tiles looking for pairs
+        </p>
         <button
-          className={
-            "py-2 px-12 rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300 ease-in-out  text-white shadow text-sm"
-          }
+          className="py-2 px-20 md:px-32 rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300 ease-in-out  text-white shadow text-sm mt-6 animate-bounce text-xl font-bold"
           onClick={start}
         >
           Play
         </button>
+        <p className="text-white">
+          developed by
+          <a href="https://tohir-babs.vercel.app/" className="underline">
+            {" "}
+            panda🐼
+          </a>
+        </p>
       </div>
     </div>
   );
