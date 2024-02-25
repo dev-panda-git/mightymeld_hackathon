@@ -1,4 +1,4 @@
-# Memory Game - Tailwind CSS
+# MATCH TILES - mighthymeld hackathon ui challeenge
 
 ## Development
 
