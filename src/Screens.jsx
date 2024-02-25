@@ -19,8 +19,11 @@ export const possibleTileEmojis = [
 
 export function StartScreen({ start }) {
   return (
-    <div className="h-screen w-screen flex flex-col p-4 items-center bg-black gap-2 font-mono">
-      <img src="match-tiles-logo.svg" className="h-[75vh] md:rotate-90 " />
+    <div className="h-screen w-screen flex flex-col p-4 items-center bg-black gap-10 font-mono">
+      <img
+        src="match-tiles-logo.svg"
+        className="md:h-[75vh] h-[65vh] md:rotate-90 "
+      />
 
       <div className="flex flex-col items-center md:relative md:-top-[10vh] gap-2">
         <p className="text-pink-400 md:text-2xl text-sm text-center">
