@@ -179,8 +179,11 @@ export function PlayScreen({ end }) {
 
   return (
     <div className="w-screen h-screen flex items-center justify-between flex-col gap-8 font-mono bg-black">
-      <div className="flex max-w-5xl justify-between items-center w-full p-3 ">
-        <img src="match-tiles-logo.svg" className="h-16 rotate-90 ml-5"></img>
+      <div className="flex max-w-4xl justify-between items-center w-full p-3 ">
+        <img
+          src="match-tiles-logo.svg"
+          className="h-16 md:h-20 rotate-90 ml-5"
+        ></img>
         {playState === "playing" ? (
           <CountdownTimer lose={setPlayState} />
         ) : (
