@@ -4,16 +4,15 @@ import * as icons from "react-icons/gi";
 import { Tile } from "./Tile";
 
 export const possibleTileContents = [
-  icons.GiHearts,
-  icons.GiWaterDrop,
-  icons.GiDiceSixFacesFive,
-  icons.GiUmbrella,
-  icons.GiCube,
-  icons.GiBeachBall,
-  icons.GiDragonfly,
-  icons.GiHummingbird,
-  icons.GiFlowerEmblem,
-  icons.GiOpenBook,
+  "🐼",
+  "💀",
+  "👺",
+  "👽",
+  "👻",
+  "🤖",
+  "🎃",
+  "🤡",
+  "🥶",
 ];
 
 export function StartScreen({ start }) {
@@ -26,7 +25,7 @@ export function StartScreen({ start }) {
           Flip over tiles looking for pairs
         </p>
         <button
-          className="py-2 px-20 md:px-32 rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300 ease-in-out  text-white shadow text-sm mt-6 animate-bounce text-xl font-bold"
+          className="py-3 px-20 md:px-32 rounded-full bg-pink-500 hover:bg-pink-600 transition duration-300 ease-in-out  text-white shadow text-sm mt-6 animate-bounce text-xl font-bold"
           onClick={start}
         >
           Play
@@ -125,19 +124,50 @@ export function PlayScreen({ end }) {
 
   return (
     <>
-      <div className="w-screen h-screen flex justify-center items-center">
-        <div className="flex flex-col items-center gap-4">
-          <p className="capitalize text-indigo-600 font-medium text-lg">
-            tries
-            <span className="px-3 py-1 rounded bg-indigo-100 ml-2">
-              {tryCount}
-            </span>
-          </p>
+      <div className="w-screen h-screen  items-center bg-black flex flex-col font-mono">
+        <div className=" w-[90vw] max-w-2xl h-[85vh] flex  flex-col justify-between items-center">
+          <div className="flex w-full justify-between items-center">
+            <img
+              src="match-tiles-logo.svg"
+              className="h-12 md:h-16 rotate-90"
+            />
 
-          <div className="grid grid-cols-4 grid-rows-4 gap-3 rounded-lg p-3 bg-indigo-100">
-            {getTiles(16).map((tile, i) => (
-              <Tile key={i} flip={() => flip(i)} {...tile} />
-            ))}
+            <p className="text-white text-4xl">
+              00.00.
+              <span className="text-lg">00</span>
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex w-full justify-between">
+              <p className="flex flex-col  items-center justify-center bg-white w-[80px] h-[80px] md:h-[100px] md:w-[100px] rounded-xl ">
+                <span className="text-4xl">{tryCount}</span>
+                <span>tries</span>
+              </p>
+              <p className="flex flex-col items-center justify-center bg-gradient-to-br from-pink-400 to-indigo-400 w-[80px] h-[80px] md:h-[100px] md:w-[100px] rounded-xl">
+                <span className="text-4xl">--</span>
+                <span className="text-center leading-tight">
+                  high <br /> score
+                </span>
+              </p>
+            </div>
+
+            <div className="grid grid-cols-4 grid-rows-4 gap-1">
+              {getTiles(16).map((tile, i) => (
+                <Tile
+                  key={i}
+                  className="flex flex-col  items-center justify-center bg-white w-[80px] h-[80px] md:h-[100px] md:w-[100px] rounded-xl "
+                  flip={() => flip(i)}
+                  {...tile}
+                />
+              ))}
+            </div>
+            <p className="text-white">
+              developed by{" "}
+              <a href="https://tohir-babs.vercel.app/" className="underline">
+                panda🐼
+              </a>
+            </p>
           </div>
         </div>
       </div>

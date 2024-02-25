@@ -3,34 +3,20 @@ export function Tile({ content: Content, flip, state }) {
     case "start":
       return (
         <Back
-          className="inline-block h-[80px] w-[80px] bg-indigo-300 text-center rounded-md"
+          className="inline-block w-[80px] h-[80px] md:h-[100px] md:w-[100px] bg-indigo-300 text-center rounded-xl"
           flip={flip}
         />
       );
     case "flipped":
       return (
-        <Front className="inline-block h-[80px] w-[80px] rounded-md bg-indigo-500 text-white p-2">
-          <Content
-            style={{
-              display: "inline-block",
-              width: "100%",
-              height: "100%",
-              verticalAlign: "top",
-            }}
-          />
+        <Front className=" h-[80px] w-[80px] md:w-[100px] md:h-[100px] rounded-xl bg-indigo-500 text-white p-2 text-5xl text-center flex items-center justify-center">
+          {Content}
         </Front>
       );
     case "matched":
       return (
-        <Matched className="inline-block  h-[80px] w-[80px] rounded-md  text-indigo-200">
-          <Content
-            style={{
-              display: "inline-block",
-              width: "100%",
-              height: "100%",
-              verticalAlign: "top",
-            }}
-          />
+        <Matched className="inline-block  h-[80px] w-[80px] md:w-[100px] md:h-[100px] rounded-xl bg-pink-400 opacity-70 p-2 text-5xl text-center flex items-center justify-center">
+          {Content}
         </Matched>
       );
     default:
