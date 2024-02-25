@@ -22,7 +22,7 @@ export function StartScreen({ start }) {
       <img src="match-tiles-logo.svg" className="h-[75vh] md:rotate-90 " />
 
       <div className="flex flex-col items-center md:relative md:-top-[10vh] gap-2">
-        <p className="text-pink-400 md:text-2xl text-lg text-center">
+        <p className="text-pink-400 md:text-2xl text-center">
           Flip over tiles looking for pairs
         </p>
         <button
@@ -32,9 +32,8 @@ export function StartScreen({ start }) {
           Play
         </button>
         <p className="text-white">
-          developed by
+          developed by{" "}
           <a href="https://tohir-babs.vercel.app/" className="underline">
-            {" "}
             panda🐼
           </a>
         </p>
