@@ -207,12 +207,12 @@ export function PlayScreen({ end }) {
                   ? "rgb(248 113 113)"
                   : "white",
             }}
-            className=" md:h-[100px] md:w-[100px] h-[82px] w-[82px] text-right flex flex-col items-center justify-center rounded-xl text-black  bg-white "
+            className=" md:h-[100px] md:w-[100px] h-[75px] w-[75px] text-right flex flex-col items-center justify-center rounded-xl text-black  bg-white "
           >
             <span className=" text-4xl font-bold ">{tryCount}</span>
             <span>tries</span>
           </p>
-          <p className=" md:h-[100px] md:w-[100px] h-[82px] w-[82px] text-right flex flex-col items-center justify-center rounded-xl text-black bg-gradient-to-br from-pink-400 to-indigo-400 ">
+          <p className=" md:h-[100px] md:w-[100px] h-[75px] w-[75px] text-right flex flex-col items-center justify-center rounded-xl text-black bg-gradient-to-br from-pink-400 to-indigo-400 ">
             <span className=" text-4xl font-bold ">
               {bestScore === 0 ? "--" : bestScore}
             </span>
