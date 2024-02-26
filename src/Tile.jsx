@@ -3,7 +3,7 @@ export function Tile({ content: Content, flip, state }) {
     return (
       <div
         style={{ perspective: "1000px" }}
-        className="bg-transparent h-[82px] md:h-[100px] col-span-1  row-span-1 md:w-[100px] w-[82px]"
+        className="bg-transparent h-[75px] md:h-[100px] col-span-1  row-span-1 md:w-[100px] w-[75px]"
       >
         <div
           style={{
@@ -36,7 +36,7 @@ export function Tile({ content: Content, flip, state }) {
     );
   } else
     return (
-      <div className="flex items-center justify-center opacity-60 h-[82px] p-2 w-[82px] md:h-[100px] md:w-[100px]  text-white col-span-1  row-span-1 bg-pink-400 rounded-xl md:rounded-2xl text-center">
+      <div className="flex items-center justify-center opacity-60 h-[75px] p-2 w-[75px] md:h-[100px] md:w-[100px]  text-white col-span-1  row-span-1 bg-pink-400 rounded-xl md:rounded-2xl text-center">
         <div className="text-5xl md:text-6xl">{Content}</div>
       </div>
     );
