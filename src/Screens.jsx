@@ -37,7 +37,7 @@ export function StartScreen({ start }) {
         </button>
         <p className="text-white">
           developed by{" "}
-          <a href="https://tohir-babs.vercel.app/" className="underline">
+          <a href="https://tohir.vercel.app/" className="underline">
             panda🐼
           </a>
         </p>
@@ -269,7 +269,7 @@ export function PlayScreen({ end }) {
         <div />
         <p>
           developed by{" "}
-          <a href="https://tohir-babs.vercel.app/" className="underline">
+          <a href="https://tohir.vercel.app/" className="underline">
             panda🐼
           </a>
         </p>
